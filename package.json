@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "istanbul cover tape \"test/*-test.js\"",
+    "test": "tape test/summer-test.js",
     "lint": "eslint index.js",
     "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
     "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml"
@@ -16,6 +16,7 @@
   "devDependencies": {
     "eslint": "^0.10.0",
     "istanbul": "^0.3.2",
-    "tape": "^3.0.3"
+    "tape": "^3.0.3",
+    "mocha":"*"
   }
 }
