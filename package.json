@@ -5,8 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "posttest": "istanbul cover test/summer-test.js",
-    "test": "tape test/summer-test.js",
+    "posttest": "istanbul cover test/summer-test.js && istanbul report clover",
+    "test": "tape test/summer-test.js > test.tap",
     "lint": "eslint index.js",
     "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
     "ci-lint": "eslint -f checkstyle index.js > checkstyle-result.xml"
