@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "posttest": "istanbul cover test/summer-test.js",
     "test": "tape test/summer-test.js",
     "lint": "eslint index.js",
     "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
